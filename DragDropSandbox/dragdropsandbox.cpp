@@ -6,6 +6,11 @@ DragDropSandbox::DragDropSandbox(QWidget *parent)
 	ui.setupUi(this);
 }
 
+void DragDropSandbox::setupActions()
+{
+
+}
+
 DragDropSandbox::~DragDropSandbox()
 {
 
