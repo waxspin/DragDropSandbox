@@ -14,6 +14,9 @@ public:
 
 private:
     Ui::DragDropSandboxClass ui;
+
+private slots:
+	void aboutClicked();
 };
 
 #endif // DRAGDROPSANDBOX_H

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Mon Aug 29 22:46:11 2011
+** Created: Tue Aug 30 10:10:40 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,8 +26,8 @@ QT_BEGIN_NAMESPACE
 class Ui_DragDropSandboxClass
 {
 public:
+    QAction *actionGenDropContent;
     QAction *actionExit;
-    QAction *actionExit_2;
     QAction *actionAbout;
     QWidget *centralwidget;
     QMenuBar *menubar;
@@ -39,10 +39,10 @@ public:
         if (DragDropSandboxClass->objectName().isEmpty())
             DragDropSandboxClass->setObjectName(QString::fromUtf8("DragDropSandboxClass"));
         DragDropSandboxClass->resize(800, 600);
+        actionGenDropContent = new QAction(DragDropSandboxClass);
+        actionGenDropContent->setObjectName(QString::fromUtf8("actionGenDropContent"));
         actionExit = new QAction(DragDropSandboxClass);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
-        actionExit_2 = new QAction(DragDropSandboxClass);
-        actionExit_2->setObjectName(QString::fromUtf8("actionExit_2"));
         actionAbout = new QAction(DragDropSandboxClass);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         centralwidget = new QWidget(DragDropSandboxClass);
@@ -59,8 +59,8 @@ public:
         DragDropSandboxClass->setStatusBar(statusbar);
 
         menubar->addAction(menuDrag_n_Drop_Sandbox->menuAction());
+        menuDrag_n_Drop_Sandbox->addAction(actionGenDropContent);
         menuDrag_n_Drop_Sandbox->addAction(actionExit);
-        menuDrag_n_Drop_Sandbox->addAction(actionExit_2);
         menuDrag_n_Drop_Sandbox->addSeparator();
         menuDrag_n_Drop_Sandbox->addAction(actionAbout);
 
@@ -72,8 +72,8 @@ public:
     void retranslateUi(QMainWindow *DragDropSandboxClass)
     {
         DragDropSandboxClass->setWindowTitle(QApplication::translate("DragDropSandboxClass", "MainWindow", 0, QApplication::UnicodeUTF8));
-        actionExit->setText(QApplication::translate("DragDropSandboxClass", "Generate Drop Content", 0, QApplication::UnicodeUTF8));
-        actionExit_2->setText(QApplication::translate("DragDropSandboxClass", "Exit", 0, QApplication::UnicodeUTF8));
+        actionGenDropContent->setText(QApplication::translate("DragDropSandboxClass", "Generate Drop Content", 0, QApplication::UnicodeUTF8));
+        actionExit->setText(QApplication::translate("DragDropSandboxClass", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("DragDropSandboxClass", "About", 0, QApplication::UnicodeUTF8));
         menuDrag_n_Drop_Sandbox->setTitle(QApplication::translate("DragDropSandboxClass", "Drag n Drop Sandbox", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
