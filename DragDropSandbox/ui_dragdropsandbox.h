@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Sat Sep 3 10:53:08 2011
+** Created: Sat Sep 3 13:28:28 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

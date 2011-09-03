@@ -6,11 +6,6 @@ DragDropSandbox::DragDropSandbox(QWidget *parent)
 	ui.setupUi(this);
 }
 
-/*void DragDropSandbox::setupActions()
-{
-
-}*/
-
 void DragDropSandbox::aboutClicked()
 {
 	//menuBar()->actionAt()

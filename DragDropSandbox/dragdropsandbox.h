@@ -3,6 +3,7 @@
 
 #include <QtGui/QMainWindow>
 #include "ui_dragdropsandbox.h"
+#include <log4cxx/logger.h>
 
 class DragDropSandbox : public QMainWindow
 {
