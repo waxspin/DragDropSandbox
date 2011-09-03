@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Sat Sep 3 09:22:53 2011
+** Created: Sat Sep 3 10:44:04 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
@@ -30,6 +31,7 @@ public:
     QAction *actionExit;
     QAction *actionAbout;
     QWidget *centralwidget;
+    QGroupBox *groupBox;
     QMenuBar *menubar;
     QMenu *menuDrag_n_Drop_Sandbox;
     QStatusBar *statusbar;
@@ -47,6 +49,9 @@ public:
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         centralwidget = new QWidget(DragDropSandboxClass);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(20, 20, 751, 231));
         DragDropSandboxClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DragDropSandboxClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -76,6 +81,7 @@ public:
         actionGenDropContent->setText(QApplication::translate("DragDropSandboxClass", "Generate Drop Content", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("DragDropSandboxClass", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("DragDropSandboxClass", "About", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("DragDropSandboxClass", "Drop Area", 0, QApplication::UnicodeUTF8));
         menuDrag_n_Drop_Sandbox->setTitle(QApplication::translate("DragDropSandboxClass", "Drag n Drop Sandbox", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
