@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Sat Sep 3 10:44:04 2011
+** Created: Sat Sep 3 10:53:08 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,6 +16,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
+#include <QtGui/QListWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
@@ -32,6 +33,7 @@ public:
     QAction *actionAbout;
     QWidget *centralwidget;
     QGroupBox *groupBox;
+    QListWidget *listWidget;
     QMenuBar *menubar;
     QMenu *menuDrag_n_Drop_Sandbox;
     QStatusBar *statusbar;
@@ -51,7 +53,12 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 20, 751, 231));
+        groupBox->setGeometry(QRect(20, 310, 751, 231));
+        groupBox->setAcceptDrops(true);
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(20, 20, 751, 271));
+        listWidget->setDragEnabled(true);
         DragDropSandboxClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DragDropSandboxClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
