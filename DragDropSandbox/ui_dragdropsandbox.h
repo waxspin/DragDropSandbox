@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Tue Aug 30 10:10:40 2011
+** Created: Sat Sep 3 09:22:53 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -65,6 +65,7 @@ public:
         menuDrag_n_Drop_Sandbox->addAction(actionAbout);
 
         retranslateUi(DragDropSandboxClass);
+        QObject::connect(actionExit, SIGNAL(triggered()), DragDropSandboxClass, SLOT(close()));
 
         QMetaObject::connectSlotsByName(DragDropSandboxClass);
     } // setupUi
