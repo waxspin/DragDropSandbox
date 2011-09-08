@@ -8,7 +8,6 @@ DragDropSandbox::DragDropSandbox(QWidget *parent)
 
 void DragDropSandbox::aboutClicked()
 {
-	//menuBar()->actionAt()
 }
 
 DragDropSandbox::~DragDropSandbox()
