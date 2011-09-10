@@ -1,6 +1,4 @@
 #include "dragdropsandbox.h"
-#include "logger.h"
-#include "basicconfigurator.h"
 
 using namespace log4cxx;
 using namespace log4cxx::helpers;
