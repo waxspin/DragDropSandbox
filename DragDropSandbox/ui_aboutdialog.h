@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'aboutdialog.ui'
 **
-** Created: Sat Sep 10 18:42:33 2011
+** Created: Sat Sep 10 18:52:46 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,39 +16,31 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QDialog>
 #include <QtGui/QHeaderView>
+#include <QtGui/QPushButton>
 #include <QtGui/QTextBrowser>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_AboutDialogClass
 {
 public:
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
     QTextBrowser *textBrowser;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *AboutDialogClass)
     {
         if (AboutDialogClass->objectName().isEmpty())
             AboutDialogClass->setObjectName(QString::fromUtf8("AboutDialogClass"));
         AboutDialogClass->resize(400, 214);
-        verticalLayoutWidget = new QWidget(AboutDialogClass);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(10, 10, 381, 191));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        textBrowser = new QTextBrowser(verticalLayoutWidget);
+        textBrowser = new QTextBrowser(AboutDialogClass);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-
-        verticalLayout->addWidget(textBrowser);
-
+        textBrowser->setGeometry(QRect(10, 10, 381, 141));
+        pushButton = new QPushButton(AboutDialogClass);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(130, 170, 141, 24));
 
         retranslateUi(AboutDialogClass);
+        QObject::connect(pushButton, SIGNAL(clicked()), AboutDialogClass, SLOT(close()));
 
         QMetaObject::connectSlotsByName(AboutDialogClass);
     } // setupUi
@@ -66,9 +58,10 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; font-weight:600;\">About Demo</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:600;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" fo"
-                        "nt-size:12pt;\">This is a demo written by Ben Bryan, for the purposes of exploring Qt4 drag and drop functionality, file </span><span style=\" font-size:12pt;\">I/O, and other things.</span></p>\n"
+                        "nt-size:12pt;\">This is a demo written by Ben Bryan, for the purposes of exploring Qt4 drag and drop functionality</span><span style=\" font-size:12pt;\">, file </span><span style=\" font-size:12pt;\">I/O, and other things.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Hope you li</span><span style=\" font-size:12pt;\">ke it! :)</span></p></td></tr></table></body></html>", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("AboutDialogClass", "Close", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
