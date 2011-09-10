@@ -9,7 +9,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 	QMainWindow(parent) {
 	ui.setupUi(this);
 	BasicConfigurator::configure();
-	LOG4CXX_INFO(sandboxLogger, "UI Setup completed and logging initialized.");
+	LOG4CXX_DEBUG(sandboxLogger, "UI Setup completed and logging initialized.");
 
 	//Setup the signal/slot connections.
 	connect(this->ui.actionAbout, SIGNAL(triggered()), this,
@@ -17,7 +17,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 }
 
 void DragDropSandbox::aboutClicked() {
-	LOG4CXX_INFO(sandboxLogger, "About triggered.");
+	LOG4CXX_DEBUG(sandboxLogger, "About triggered.");
 
 	//Here's where we pop up the about dialog.
 	AboutDialog *dlg = new AboutDialog();
