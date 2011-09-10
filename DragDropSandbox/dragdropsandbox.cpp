@@ -18,6 +18,10 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 
 void DragDropSandbox::aboutClicked() {
 	LOG4CXX_INFO(sandboxLogger, "About triggered.");
+
+	//Here's where we pop up the about dialog.
+	//AboutDialog dlg = new AboutDialog();
+	//dlg->show();
 }
 
 DragDropSandbox::~DragDropSandbox() {

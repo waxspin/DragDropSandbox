@@ -3,6 +3,7 @@
 
 #include <QtGui/QMainWindow>
 #include "ui_dragdropsandbox.h"
+#include "aboutdialog.h"
 #include "logger.h"
 #include "basicconfigurator.h"
 
