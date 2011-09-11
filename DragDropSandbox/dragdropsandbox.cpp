@@ -24,5 +24,8 @@ void DragDropSandbox::aboutClicked() {
 	dlg->show();
 }
 
+void DragDropSandbox::setupMockData() {
+}
+
 DragDropSandbox::~DragDropSandbox() {
 }

@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::DragDropSandboxClass ui;
+    void setupMockData();
 
 private slots:
 	void aboutClicked();

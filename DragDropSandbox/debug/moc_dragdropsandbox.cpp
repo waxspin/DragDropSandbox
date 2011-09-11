@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dragdropsandbox.h'
 **
-** Created: Sat Sep 10 22:37:02 2011
+** Created: Sat Sep 10 23:31:31 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
