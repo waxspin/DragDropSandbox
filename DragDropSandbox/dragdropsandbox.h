@@ -21,6 +21,7 @@ private:
 
 private slots:
 	void aboutClicked();
+	void generateMockData();
 };
 
 #endif // DRAGDROPSANDBOX_H

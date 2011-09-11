@@ -14,6 +14,8 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 	//Setup the signal/slot connections.
 	connect(this->ui.actionAbout, SIGNAL(triggered()), this,
 			SLOT(aboutClicked()));
+	connect(this->ui.actionGenDropContent, SIGNAL(triggered()), this,
+			SLOT(generateMockData()));
 }
 
 void DragDropSandbox::aboutClicked() {
@@ -24,7 +26,8 @@ void DragDropSandbox::aboutClicked() {
 	dlg->show();
 }
 
-void DragDropSandbox::setupMockData() {
+void DragDropSandbox::generateMockData() {
+	LOG4CXX_DEBUG(sandboxLogger, "Should generate mock data.");
 }
 
 DragDropSandbox::~DragDropSandbox() {
