@@ -25,6 +25,4 @@ void DragDropSandbox::aboutClicked() {
 }
 
 DragDropSandbox::~DragDropSandbox() {
-	sandboxLogger = NULL;
-	delete sandboxLogger;
 }
