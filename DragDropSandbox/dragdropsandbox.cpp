@@ -28,6 +28,10 @@ void DragDropSandbox::aboutClicked() {
 
 void DragDropSandbox::generateMockData() {
 	LOG4CXX_DEBUG(sandboxLogger, "Should generate mock data.");
+	for (int i = 0; i < 100; ++i) {
+		mockData.append("Hello world.");
+	}
+	this->ui.listWidget->addItems(mockData);
 }
 
 DragDropSandbox::~DragDropSandbox() {
