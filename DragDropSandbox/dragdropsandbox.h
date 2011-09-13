@@ -2,6 +2,7 @@
 #define DRAGDROPSANDBOX_H
 
 #include <QtGui/QMainWindow>
+#include "qstring.h"
 #include "ui_dragdropsandbox.h"
 #include "aboutdialog.h"
 #include "logger.h"
