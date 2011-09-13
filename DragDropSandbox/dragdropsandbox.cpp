@@ -31,6 +31,7 @@ void DragDropSandbox::generateMockData() {
 
 	QString str = NULL;
 	str = QString::number(10, 10);
+	this->ui.listWidgetDrop->addItems(dropData);
 
 	for (int i = 0; i < 100; ++i) {
 		mockData.append("Hello world." + str);

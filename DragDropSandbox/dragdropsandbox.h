@@ -19,6 +19,7 @@ public:
 private:
     Ui::DragDropSandboxClass ui;
     QStringList mockData;
+    QStringList dropData;
     void setupMockData();
 
 private slots:

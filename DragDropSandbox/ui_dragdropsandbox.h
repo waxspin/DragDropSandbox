@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Tue Sep 13 00:26:26 2011
+** Created: Tue Sep 13 08:51:29 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,7 +16,6 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QListView>
 #include <QtGui/QListWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
@@ -38,7 +37,7 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QListView *listView;
+    QListWidget *listWidgetDrop;
     QMenuBar *menubar;
     QMenu *menuDrag_n_Drop_Sandbox;
     QStatusBar *statusbar;
@@ -60,6 +59,7 @@ public:
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(20, 20, 751, 271));
         listWidget->setDragEnabled(true);
+        listWidget->setDragDropMode(QAbstractItemView::DragOnly);
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
         horizontalLayoutWidget->setGeometry(QRect(20, 320, 751, 231));
@@ -70,10 +70,12 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        listView = new QListView(horizontalLayoutWidget);
-        listView->setObjectName(QString::fromUtf8("listView"));
+        listWidgetDrop = new QListWidget(horizontalLayoutWidget);
+        listWidgetDrop->setObjectName(QString::fromUtf8("listWidgetDrop"));
+        listWidgetDrop->setDragEnabled(true);
+        listWidgetDrop->setDragDropMode(QAbstractItemView::DropOnly);
 
-        horizontalLayout->addWidget(listView);
+        horizontalLayout->addWidget(listWidgetDrop);
 
         DragDropSandboxClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DragDropSandboxClass);
