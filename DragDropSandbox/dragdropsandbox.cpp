@@ -39,4 +39,5 @@ void DragDropSandbox::generateMockData() {
 }
 
 DragDropSandbox::~DragDropSandbox() {
+	this->destroy(true, true);
 }
