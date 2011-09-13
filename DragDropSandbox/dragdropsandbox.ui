@@ -82,6 +82,7 @@
     <property name="title">
      <string>Drag n Drop Sandbox</string>
     </property>
+    <addaction name="actionOpen_File"/>
     <addaction name="actionGenDropContent"/>
     <addaction name="actionExit"/>
     <addaction name="separator"/>
@@ -103,6 +104,11 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open File</string>
    </property>
   </action>
  </widget>

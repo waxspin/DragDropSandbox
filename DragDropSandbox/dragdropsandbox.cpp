@@ -16,6 +16,8 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(aboutClicked()));
 	connect(this->ui.actionGenDropContent, SIGNAL(triggered()), this,
 			SLOT(generateMockData()));
+	connect(this->ui.actionOpen_File, SIGNAL(triggered()), this,
+			SLOT(openFile()));
 }
 
 void DragDropSandbox::aboutClicked() {
@@ -24,6 +26,13 @@ void DragDropSandbox::aboutClicked() {
 	//Here's where we pop up the about dialog.
 	AboutDialog *dlg = new AboutDialog();
 	dlg->show();
+}
+
+void DragDropSandbox::openFile() {
+	LOG4CXX_DEBUG(sandboxLogger, "Open file clicked.");
+	QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
+			tr("Files (*.*)"));
+	LOG4CXX_DEBUG(sandboxLogger, "file chosen");
 }
 
 void DragDropSandbox::generateMockData() {

@@ -4,6 +4,7 @@
 #include <QtGui/QMainWindow>
 #include "qstring.h"
 #include "qdatetime.h"
+#include "qfiledialog.h"
 #include "ui_dragdropsandbox.h"
 #include "aboutdialog.h"
 #include "logger.h"
@@ -26,6 +27,7 @@ private:
 private slots:
 	void aboutClicked();
 	void generateMockData();
+	void openFile();
 };
 
 #endif // DRAGDROPSANDBOX_H

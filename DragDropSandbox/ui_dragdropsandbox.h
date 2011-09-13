@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Tue Sep 13 09:14:39 2011
+** Created: Tue Sep 13 10:48:14 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -32,6 +32,7 @@ public:
     QAction *actionGenDropContent;
     QAction *actionExit;
     QAction *actionAbout;
+    QAction *actionOpen_File;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QWidget *horizontalLayoutWidget;
@@ -53,6 +54,8 @@ public:
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionAbout = new QAction(DragDropSandboxClass);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
+        actionOpen_File = new QAction(DragDropSandboxClass);
+        actionOpen_File->setObjectName(QString::fromUtf8("actionOpen_File"));
         centralwidget = new QWidget(DragDropSandboxClass);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         listWidget = new QListWidget(centralwidget);
@@ -89,6 +92,7 @@ public:
         DragDropSandboxClass->setStatusBar(statusbar);
 
         menubar->addAction(menuDrag_n_Drop_Sandbox->menuAction());
+        menuDrag_n_Drop_Sandbox->addAction(actionOpen_File);
         menuDrag_n_Drop_Sandbox->addAction(actionGenDropContent);
         menuDrag_n_Drop_Sandbox->addAction(actionExit);
         menuDrag_n_Drop_Sandbox->addSeparator();
@@ -106,6 +110,7 @@ public:
         actionGenDropContent->setText(QApplication::translate("DragDropSandboxClass", "Generate Drop Content", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("DragDropSandboxClass", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("DragDropSandboxClass", "About", 0, QApplication::UnicodeUTF8));
+        actionOpen_File->setText(QApplication::translate("DragDropSandboxClass", "Open File", 0, QApplication::UnicodeUTF8));
         menuDrag_n_Drop_Sandbox->setTitle(QApplication::translate("DragDropSandboxClass", "Drag n Drop Sandbox", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
