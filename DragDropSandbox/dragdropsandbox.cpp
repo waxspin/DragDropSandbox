@@ -30,7 +30,9 @@ void DragDropSandbox::generateMockData() {
 	LOG4CXX_DEBUG(sandboxLogger, "Should generate mock data.");
 
 	QString str = NULL;
-	str = QString::number(10, 10);
+	QTime midnight(0, 0, 0);
+	qsrand(midnight.secsTo(QTime::currentTime()));
+	str = QString::number(qrand() % 1000000);
 	this->ui.listWidgetDrop->addItems(dropData);
 
 	for (int i = 0; i < 100; ++i) {

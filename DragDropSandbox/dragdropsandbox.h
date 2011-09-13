@@ -3,6 +3,7 @@
 
 #include <QtGui/QMainWindow>
 #include "qstring.h"
+#include "qdatetime.h"
 #include "ui_dragdropsandbox.h"
 #include "aboutdialog.h"
 #include "logger.h"
