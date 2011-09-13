@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dragdropsandbox.ui'
 **
-** Created: Mon Sep 12 22:25:17 2011
+** Created: Mon Sep 12 23:21:31 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,12 +14,14 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
-#include <QtGui/QGroupBox>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
+#include <QtGui/QListView>
 #include <QtGui/QListWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QStatusBar>
 #include <QtGui/QWidget>
 
@@ -32,8 +34,11 @@ public:
     QAction *actionExit;
     QAction *actionAbout;
     QWidget *centralwidget;
-    QGroupBox *groupBox;
     QListWidget *listWidget;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QListView *listView;
     QMenuBar *menubar;
     QMenu *menuDrag_n_Drop_Sandbox;
     QStatusBar *statusbar;
@@ -51,14 +56,25 @@ public:
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         centralwidget = new QWidget(DragDropSandboxClass);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 310, 751, 231));
-        groupBox->setAcceptDrops(true);
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(20, 20, 751, 271));
         listWidget->setDragEnabled(true);
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(20, 320, 751, 231));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        listView = new QListView(horizontalLayoutWidget);
+        listView->setObjectName(QString::fromUtf8("listView"));
+
+        horizontalLayout->addWidget(listView);
+
         DragDropSandboxClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DragDropSandboxClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -88,7 +104,6 @@ public:
         actionGenDropContent->setText(QApplication::translate("DragDropSandboxClass", "Generate Drop Content", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("DragDropSandboxClass", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("DragDropSandboxClass", "About", 0, QApplication::UnicodeUTF8));
-        groupBox->setTitle(QApplication::translate("DragDropSandboxClass", "Drop Area", 0, QApplication::UnicodeUTF8));
         menuDrag_n_Drop_Sandbox->setTitle(QApplication::translate("DragDropSandboxClass", "Drag n Drop Sandbox", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
