@@ -32,7 +32,11 @@ void DragDropSandbox::openFile() {
 	LOG4CXX_DEBUG(sandboxLogger, "Open file clicked.");
 	QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
 			tr("Files (*.*)"));
-	LOG4CXX_DEBUG(sandboxLogger, "file chosen");
+	QByteArray lsba = fileName.toLocal8Bit();
+	char *logString = lsba.data();
+	LOG4CXX_DEBUG(sandboxLogger, "file chosen" << logString);
+	logString = NULL;
+	delete logString;
 }
 
 void DragDropSandbox::generateMockData() {

@@ -5,6 +5,7 @@
 #include "qstring.h"
 #include "qdatetime.h"
 #include "qfiledialog.h"
+#include "qbytearray.h"
 #include "ui_dragdropsandbox.h"
 #include "aboutdialog.h"
 #include "logger.h"
