@@ -10,6 +10,7 @@
 #include "aboutdialog.h"
 #include "logger.h"
 #include "basicconfigurator.h"
+#include "mpg123.h"
 
 class DragDropSandbox : public QMainWindow
 {
