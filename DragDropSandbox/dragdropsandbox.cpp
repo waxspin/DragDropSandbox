@@ -11,6 +11,10 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 	BasicConfigurator::configure();
 	LOG4CXX_DEBUG(sandboxLogger, "UI Setup completed and logging initialized.");
 
+	int mpgRet;
+	mpg123_init();
+	mpg = mpg123_new(NULL, &mpgRet);
+
 	//Setup the signal/slot connections.
 	connect(this->ui.actionAbout, SIGNAL(triggered()), this,
 			SLOT(aboutClicked()));

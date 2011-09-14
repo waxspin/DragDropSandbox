@@ -24,6 +24,7 @@ private:
     Ui::DragDropSandboxClass ui;
     QStringList mockData;
     QStringList dropData;
+    mpg123_handle *mpg;
     void setupMockData();
 
 private slots:
