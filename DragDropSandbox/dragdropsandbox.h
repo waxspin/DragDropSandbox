@@ -11,6 +11,7 @@
 #include "logger.h"
 #include "basicconfigurator.h"
 #include "mpg123.h"
+//#include "PlayBackThread.h"
 
 class DragDropSandbox : public QMainWindow
 {
@@ -25,6 +26,7 @@ private:
     QStringList mockData;
     QStringList dropData;
     mpg123_handle *mpg;
+    //PlayBackThread playbackThread;
     void setupMockData();
 
 private slots:

@@ -2,10 +2,12 @@ TEMPLATE = app
 TARGET = DragDropSandbox
 QT += core \
     gui
-HEADERS += aboutdialog.h \
+HEADERS += PlayBackThread.h \
+    aboutdialog.h \
     dragdropsandbox.h \
     logger.h
-SOURCES += aboutdialog.cpp \
+SOURCES += PlayBackThread.cpp \
+    aboutdialog.cpp \
     main.cpp \
     dragdropsandbox.cpp
 FORMS += aboutdialog.ui \
