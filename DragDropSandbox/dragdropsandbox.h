@@ -11,7 +11,7 @@
 #include "logger.h"
 #include "basicconfigurator.h"
 #include "mpg123.h"
-//#include "PlayBackThread.h"
+#include "PlayBackThread.h"
 
 class DragDropSandbox : public QMainWindow
 {
