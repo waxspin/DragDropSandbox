@@ -17,7 +17,8 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 	mpg = mpg123_new(NULL, &mpgRet);
 
 	if (mpg == NULL) {
-		LOG4CXX_ERROR(sandboxLogger, "Error occurred trying to initializee the mp3 library.");
+		LOG4CXX_ERROR(sandboxLogger, "Error occurred trying to initialize the mp3 library.");
+		close();
 	} else {
 		LOG4CXX_DEBUG(sandboxLogger, "Successfully initialized mp3 lib.");
 	}
@@ -66,7 +67,9 @@ void DragDropSandbox::generateMockData() {
 }
 
 DragDropSandbox::~DragDropSandbox() {
-	mpg123_delete(mpg);
-	mpg123_exit();
+	if (mpg != NULL) {
+		mpg123_delete(mpg);
+		mpg123_exit();
+	}
 	this->destroy(true, true);
 }
