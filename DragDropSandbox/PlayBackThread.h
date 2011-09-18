@@ -7,6 +7,7 @@
 #include "qthread.h"
 #include "qmutex.h"
 #include "qwaitcondition.h"
+#include "mpg123.h"
 
 #ifndef PLAYBACKTHREAD_H_
 #define PLAYBACKTHREAD_H_
@@ -19,6 +20,7 @@ public:
 	~PlayBackThread();
 
 protected:
+	mpg123_handle *mpg;
 	void run();
 
 private:
