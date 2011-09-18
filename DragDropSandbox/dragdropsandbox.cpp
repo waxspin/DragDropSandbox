@@ -12,7 +12,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 	LOG4CXX_DEBUG(sandboxLogger, "UI Setup completed and logging initialized.");
 
 	//Init the playback thread
-	//playbackThread = new PlayBackThread(this);
+	playbackThread = new PlayBackThread();
 
 	//Setup the signal/slot connections.
 	connect(this->ui.actionAbout, SIGNAL(triggered()), this,

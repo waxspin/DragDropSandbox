@@ -8,6 +8,7 @@
 #include "qmutex.h"
 #include "qwaitcondition.h"
 #include "mpg123.h"
+#include "logger.h"
 
 #ifndef PLAYBACKTHREAD_H_
 #define PLAYBACKTHREAD_H_
@@ -17,11 +18,11 @@ class PlayBackThread: public QThread {
 
 public:
 	PlayBackThread(QObject *parent = 0);
+	void run();
 	~PlayBackThread();
 
 protected:
 	mpg123_handle *mpg;
-	void run();
 
 private:
 	QMutex mutex;
