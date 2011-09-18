@@ -31,6 +31,9 @@ private slots:
 	void aboutClicked();
 	void generateMockData();
 	void openFile();
+
+signals:
+	void testEmission();
 };
 
 #endif // DRAGDROPSANDBOX_H

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dragdropsandbox.h'
 **
-** Created: Sun Sep 18 14:03:31 2011
+** Created: Sun Sep 18 17:55:19 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,24 +23,28 @@ static const uint qt_meta_data_DragDropSandbox[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      17,   16,   16,   16, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      17,   16,   16,   16, 0x08,
       32,   16,   16,   16, 0x08,
-      51,   16,   16,   16, 0x08,
+      47,   16,   16,   16, 0x08,
+      66,   16,   16,   16, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_DragDropSandbox[] = {
-    "DragDropSandbox\0\0aboutClicked()\0"
-    "generateMockData()\0openFile()\0"
+    "DragDropSandbox\0\0testEmission()\0"
+    "aboutClicked()\0generateMockData()\0"
+    "openFile()\0"
 };
 
 const QMetaObject DragDropSandbox::staticMetaObject = {
@@ -72,13 +76,20 @@ int DragDropSandbox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: aboutClicked(); break;
-        case 1: generateMockData(); break;
-        case 2: openFile(); break;
+        case 0: testEmission(); break;
+        case 1: aboutClicked(); break;
+        case 2: generateMockData(); break;
+        case 3: openFile(); break;
         default: ;
         }
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
+}
+
+// SIGNAL 0
+void DragDropSandbox::testEmission()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE

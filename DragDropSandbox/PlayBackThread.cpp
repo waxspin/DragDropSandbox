@@ -12,7 +12,8 @@ using namespace log4cxx::helpers;
 
 LoggerPtr threadLogger(Logger::getLogger("PlayBackThread"));
 
-PlayBackThread::PlayBackThread(QObject *parent) : QThread(parent) {
+PlayBackThread::PlayBackThread(QObject *parent) :
+	QThread(parent) {
 	//Initialize the mp3 lib
 
 	int mpgRet;
@@ -27,7 +28,12 @@ PlayBackThread::PlayBackThread(QObject *parent) : QThread(parent) {
 
 }
 
+void PlayBackThread::testSlot() {
+	LOG4CXX_DEBUG(threadLogger, "test slot triggered.");
+}
+
 void PlayBackThread::run() {
+	LOG4CXX_DEBUG(threadLogger, "Run executing.");
 	return;
 }
 

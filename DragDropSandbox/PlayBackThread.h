@@ -24,11 +24,14 @@ public:
 protected:
 	mpg123_handle *mpg;
 
-private:
-	QMutex mutex;
-	QWaitCondition condition;
-	bool restart;
-	bool abort;
+public slots:
+	void testSlot();
+
+//private:
+	//QMutex mutex;
+	//QWaitCondition condition;
+	//bool restart;
+	//bool abort;
 };
 
 #endif /* PLAYBACKTHREAD_H_ */

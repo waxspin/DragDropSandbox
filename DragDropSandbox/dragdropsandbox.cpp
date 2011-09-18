@@ -13,6 +13,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 
 	//Init the playback thread
 	playbackThread = new PlayBackThread();
+	playbackThread->start();
 
 	//Setup the signal/slot connections.
 	connect(this->ui.actionAbout, SIGNAL(triggered()), this,
@@ -21,6 +22,9 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(generateMockData()));
 	connect(this->ui.actionOpen_File, SIGNAL(triggered()), this,
 			SLOT(openFile()));
+
+	connect(this, SIGNAL(testEmission()), playbackThread,
+			SLOT(testSlot()));
 }
 
 void DragDropSandbox::aboutClicked() {
@@ -40,6 +44,8 @@ void DragDropSandbox::openFile() {
 	LOG4CXX_DEBUG(sandboxLogger, "file chosen" << logString);
 	logString = NULL;
 	delete logString;
+
+	emit testEmission();
 }
 
 void DragDropSandbox::generateMockData() {
