@@ -26,7 +26,7 @@ private:
     QStringList mockData;
     QStringList dropData;
     mpg123_handle *mpg;
-    //PlayBackThread playbackThread;
+    PlayBackThread *playbackThread;
     void setupMockData();
 
 private slots:

@@ -5,12 +5,14 @@
  *      Author: bbryan
  */
 #include "qthread.h"
+#include "qmutex.h"
+#include "qwaitcondition.h"
 
 #ifndef PLAYBACKTHREAD_H_
 #define PLAYBACKTHREAD_H_
 
 class PlayBackThread: public QThread {
-Q_OBJECT
+	Q_OBJECT
 
 public:
 	PlayBackThread(QObject *parent = 0);
@@ -20,8 +22,8 @@ protected:
 	void run();
 
 private:
-//	QMutex mutex;
-//	QWaitCondition condition;
+	QMutex mutex;
+	QWaitCondition condition;
 	bool restart;
 	bool abort;
 };

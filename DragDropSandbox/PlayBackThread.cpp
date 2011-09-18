@@ -12,6 +12,10 @@ PlayBackThread::PlayBackThread(QObject *parent) : QThread(parent) {
 
 }
 
+void PlayBackThread::run() {
+
+}
+
 PlayBackThread::~PlayBackThread() {
 	// TODO Auto-generated destructor stub
 }
