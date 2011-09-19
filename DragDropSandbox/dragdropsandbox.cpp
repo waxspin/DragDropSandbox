@@ -67,7 +67,7 @@ void DragDropSandbox::generateMockData() {
 DragDropSandbox::~DragDropSandbox() {
 	if (playbackThread != NULL) {
 		if (playbackThread->isRunning()) {
-			//playbackThread->quit();
+			emit testEmission();
 			playbackThread->wait();
 		}
 		delete playbackThread;
