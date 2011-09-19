@@ -27,7 +27,7 @@ protected:
 
 public slots:
 	void stopPlaybackThread();
-	void receiveFileData(const QByteArray &ba);
+	void receiveFileData(const QString &path);
 
 //private:
 	//QMutex mutex;
