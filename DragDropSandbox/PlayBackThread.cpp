@@ -20,6 +20,7 @@ PlayBackThread::PlayBackThread(QObject *parent) :
 	int mpgRet;
 	mpg123_init();
 	mpg = mpg123_new(NULL, &mpgRet);
+	mpg123_param(mpg, MPG123_VERBOSE, 2, 0);
 
 	if (mpg == NULL) {
 		LOG4CXX_ERROR(threadLogger, "Error occurred trying to initialize the mp3 library.");
@@ -35,6 +36,13 @@ void PlayBackThread::stopPlaybackThread() {
 }
 
 void PlayBackThread::run() {
+	mpg123_open_feed(mpg);
+
+	if (mpg == NULL) {
+		runDecodeThread = false;
+		LOG4CXX_DEBUG(threadLogger, "Error occurred opening feed.");
+	}
+
 	while (runDecodeThread) {
 		//LOG4CXX_DEBUG(threadLogger, "Run executing.");
 	}

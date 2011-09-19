@@ -6,6 +6,7 @@
 #include "qdatetime.h"
 #include "qfiledialog.h"
 #include "qbytearray.h"
+#include "qfile.h"
 #include "ui_dragdropsandbox.h"
 #include "aboutdialog.h"
 #include "logger.h"
@@ -33,7 +34,8 @@ private slots:
 	void openFile();
 
 signals:
-	void testEmission();
+	void stopPlaybackThread();
+	void dispatchByteArrayFromFile(const QByteArray &ba);
 };
 
 #endif // DRAGDROPSANDBOX_H

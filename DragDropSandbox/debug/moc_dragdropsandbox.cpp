@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dragdropsandbox.h'
 **
-** Created: Mon Sep 19 12:14:07 2011
+** Created: Mon Sep 19 13:29:35 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,26 +23,28 @@ static const uint qt_meta_data_DragDropSandbox[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       17,   16,   16,   16, 0x05,
+      41,   38,   16,   16, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      32,   16,   16,   16, 0x08,
-      47,   16,   16,   16, 0x08,
-      66,   16,   16,   16, 0x08,
+      79,   16,   16,   16, 0x08,
+      94,   16,   16,   16, 0x08,
+     113,   16,   16,   16, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_DragDropSandbox[] = {
-    "DragDropSandbox\0\0testEmission()\0"
+    "DragDropSandbox\0\0stopPlaybackThread()\0"
+    "ba\0dispatchByteArrayFromFile(QByteArray)\0"
     "aboutClicked()\0generateMockData()\0"
     "openFile()\0"
 };
@@ -76,20 +78,28 @@ int DragDropSandbox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: testEmission(); break;
-        case 1: aboutClicked(); break;
-        case 2: generateMockData(); break;
-        case 3: openFile(); break;
+        case 0: stopPlaybackThread(); break;
+        case 1: dispatchByteArrayFromFile((*reinterpret_cast< const QByteArray(*)>(_a[1]))); break;
+        case 2: aboutClicked(); break;
+        case 3: generateMockData(); break;
+        case 4: openFile(); break;
         default: ;
         }
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
 
 // SIGNAL 0
-void DragDropSandbox::testEmission()
+void DragDropSandbox::stopPlaybackThread()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, 0);
+}
+
+// SIGNAL 1
+void DragDropSandbox::dispatchByteArrayFromFile(const QByteArray & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_END_MOC_NAMESPACE

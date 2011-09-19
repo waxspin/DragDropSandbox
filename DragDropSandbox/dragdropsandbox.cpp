@@ -22,8 +22,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(generateMockData()));
 	connect(this->ui.actionOpen_File, SIGNAL(triggered()), this,
 			SLOT(openFile()));
-
-	connect(this, SIGNAL(testEmission()), playbackThread,
+	connect(this, SIGNAL(stopPlaybackThread()), this->playbackThread,
 			SLOT(stopPlaybackThread()));
 }
 
@@ -45,7 +44,21 @@ void DragDropSandbox::openFile() {
 	logString = NULL;
 	delete logString;
 
-	emit testEmission();
+	//Now we need to open and read the file.
+	QFile file(fileName);
+	QByteArray ba = NULL;
+	if (file.open(QIODevice::ReadOnly))
+	{
+		ba = file.readAll();
+		file.close();
+	} else {
+		LOG4CXX_ERROR(sandboxLogger, "An error occurred reading the file.");
+		emit stopPlaybackThread();
+		close();
+	}
+
+
+
 }
 
 void DragDropSandbox::generateMockData() {
@@ -67,7 +80,7 @@ void DragDropSandbox::generateMockData() {
 DragDropSandbox::~DragDropSandbox() {
 	if (playbackThread != NULL) {
 		if (playbackThread->isRunning()) {
-			emit testEmission();
+			emit stopPlaybackThread();
 			playbackThread->wait();
 		}
 		delete playbackThread;
