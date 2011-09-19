@@ -24,6 +24,8 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(openFile()));
 	connect(this, SIGNAL(stopPlaybackThread()), this->playbackThread,
 			SLOT(stopPlaybackThread()));
+	connect(this, SIGNAL(dispatchByteArrayFromFile(QByteArray ba)), this->playbackThread,
+			SLOT(receiveFileData(QByteArray ba)));
 }
 
 void DragDropSandbox::aboutClicked() {
@@ -47,17 +49,16 @@ void DragDropSandbox::openFile() {
 	//Now we need to open and read the file.
 	QFile file(fileName);
 	QByteArray ba = NULL;
-	if (file.open(QIODevice::ReadOnly))
-	{
+	if (file.open(QIODevice::ReadOnly)) {
 		ba = file.readAll();
 		file.close();
 	} else {
-		LOG4CXX_ERROR(sandboxLogger, "An error occurred reading the file.");
-		emit stopPlaybackThread();
+		LOG4CXX_ERROR(sandboxLogger, "An error occurred reading the file."); emit
+		stopPlaybackThread();
 		close();
 	}
 
-
+	emit dispatchByteArrayFromFile(ba);
 
 }
 

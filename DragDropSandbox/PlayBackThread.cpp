@@ -30,6 +30,10 @@ PlayBackThread::PlayBackThread(QObject *parent) :
 
 }
 
+void PlayBackThread::receiveFileData(const QByteArray &ba) {
+	LOG4CXX_DEBUG(threadLogger, "Should have access to file data now.");
+}
+
 void PlayBackThread::stopPlaybackThread() {
 	LOG4CXX_DEBUG(threadLogger, "stop playback thread triggered.");
 	runDecodeThread = false;
