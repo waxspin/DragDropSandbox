@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'PlayBackThread.h'
 **
-** Created: Sun Sep 18 17:55:18 2011
+** Created: Mon Sep 19 11:31:46 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -37,7 +37,7 @@ static const uint qt_meta_data_PlayBackThread[] = {
 };
 
 static const char qt_meta_stringdata_PlayBackThread[] = {
-    "PlayBackThread\0\0testSlot()\0"
+    "PlayBackThread\0\0stopPlaybackThread()\0"
 };
 
 const QMetaObject PlayBackThread::staticMetaObject = {
@@ -69,7 +69,7 @@ int PlayBackThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: testSlot(); break;
+        case 0: stopPlaybackThread(); break;
         default: ;
         }
         _id -= 1;

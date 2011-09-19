@@ -23,9 +23,10 @@ public:
 
 protected:
 	mpg123_handle *mpg;
+	bool runDecodeThread;
 
 public slots:
-	void testSlot();
+	void stopPlaybackThread();
 
 //private:
 	//QMutex mutex;

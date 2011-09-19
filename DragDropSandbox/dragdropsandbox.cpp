@@ -24,7 +24,7 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(openFile()));
 
 	connect(this, SIGNAL(testEmission()), playbackThread,
-			SLOT(testSlot()));
+			SLOT(stopPlaybackThread()));
 }
 
 void DragDropSandbox::aboutClicked() {
@@ -61,12 +61,19 @@ void DragDropSandbox::generateMockData() {
 		mockData.append("Hello world." + str);
 	}
 	this->ui.listWidget->addItems(mockData);
+
 }
 
 DragDropSandbox::~DragDropSandbox() {
 	if (playbackThread != NULL) {
-		playbackThread = NULL;
+		if (playbackThread->isRunning()) {
+			//playbackThread->quit();
+			playbackThread->wait();
+		}
 		delete playbackThread;
 	}
+
+	delete sandboxLogger;
+
 	this->destroy(true, true);
 }
