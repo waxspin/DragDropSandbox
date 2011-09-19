@@ -24,8 +24,8 @@ DragDropSandbox::DragDropSandbox(QWidget *parent) :
 			SLOT(openFile()));
 	connect(this, SIGNAL(stopPlaybackThread()), this->playbackThread,
 			SLOT(stopPlaybackThread()));
-	connect(this, SIGNAL(dispatchByteArrayFromFile(QByteArray ba)), this->playbackThread,
-			SLOT(receiveFileData(QByteArray ba)));
+	connect(this, SIGNAL(dispatchByteArrayFromFile(QByteArray)), this->playbackThread,
+			SLOT(receiveFileData(QByteArray)));
 }
 
 void DragDropSandbox::aboutClicked() {
