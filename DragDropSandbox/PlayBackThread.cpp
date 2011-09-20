@@ -32,9 +32,15 @@ PlayBackThread::PlayBackThread(QObject *parent) :
 
 void PlayBackThread::receiveFileData(const QString &path) {
 	QByteArray lsba = path.toLocal8Bit();
-		char *logString = lsba.data();
-	LOG4CXX_DEBUG(threadLogger, "Should have access to file data now: " << logString);
-	logString = NULL;
+		char *charPtrFileName = lsba.data();
+	LOG4CXX_DEBUG(threadLogger, "Should have access to file data now: " << charPtrFileName);
+
+	//Load the mp3 file here.
+	if (mpg123_open(mpg, charPtrFileName) != MPG123_OK) {
+		qFatal("Error opening %s: %s", charPtrFileName, mpg123_strerror(mpg));
+	} else {
+		LOG4CXX_DEBUG(threadLogger, "Successfully opened mp3 file " << charPtrFileName);
+	}
 }
 
 void PlayBackThread::stopPlaybackThread() {

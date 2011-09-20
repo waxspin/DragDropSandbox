@@ -44,7 +44,7 @@ void DragDropSandbox::openFile() {
 	char *logString = lsba.data();
 	LOG4CXX_DEBUG(sandboxLogger, "file chosen" << logString);
 	logString = NULL;
-	//delete logString;
+	delete logString;
 
 	//Now we need to open and read the file.
 	/*QFile file(fileName);
