@@ -35,7 +35,7 @@ private slots:
 
 signals:
 	void stopPlaybackThread();
-	void dispatchByteArrayFromFile(const QString &path);
+	void dispatchFileName(const QString &path);
 };
 
 #endif // DRAGDROPSANDBOX_H

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dragdropsandbox.h'
 **
-** Created: Mon Sep 19 23:24:46 2011
+** Created: Mon Sep 19 23:38:15 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -35,16 +35,16 @@ static const uint qt_meta_data_DragDropSandbox[] = {
       43,   38,   16,   16, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      78,   16,   16,   16, 0x08,
-      93,   16,   16,   16, 0x08,
-     112,   16,   16,   16, 0x08,
+      69,   16,   16,   16, 0x08,
+      84,   16,   16,   16, 0x08,
+     103,   16,   16,   16, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_DragDropSandbox[] = {
     "DragDropSandbox\0\0stopPlaybackThread()\0"
-    "path\0dispatchByteArrayFromFile(QString)\0"
+    "path\0dispatchFileName(QString)\0"
     "aboutClicked()\0generateMockData()\0"
     "openFile()\0"
 };
@@ -79,7 +79,7 @@ int DragDropSandbox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: stopPlaybackThread(); break;
-        case 1: dispatchByteArrayFromFile((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: dispatchFileName((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 2: aboutClicked(); break;
         case 3: generateMockData(); break;
         case 4: openFile(); break;
@@ -97,7 +97,7 @@ void DragDropSandbox::stopPlaybackThread()
 }
 
 // SIGNAL 1
-void DragDropSandbox::dispatchByteArrayFromFile(const QString & _t1)
+void DragDropSandbox::dispatchFileName(const QString & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
