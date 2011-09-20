@@ -38,9 +38,9 @@ void PlayBackThread::receiveFileData(const QString &path) {
 	//Load the mp3 file here.
 	if (mpg123_open(mpg, charPtrFileName) != MPG123_OK) {
 		qFatal("Error opening %s: %s", charPtrFileName, mpg123_strerror(mpg));
-	} else {
-		LOG4CXX_DEBUG(threadLogger, "Successfully opened mp3 file " << charPtrFileName);
 	}
+
+	//Look for exceptional circumstances, or loop as normal
 }
 
 void PlayBackThread::stopPlaybackThread() {
@@ -49,7 +49,7 @@ void PlayBackThread::stopPlaybackThread() {
 }
 
 void PlayBackThread::run() {
-	mpg123_open_feed(mpg);
+	//mpg123_open_feed(mpg);
 
 	if (mpg == NULL) {
 		runDecodeThread = false;
