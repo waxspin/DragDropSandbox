@@ -30,7 +30,7 @@ PlayBackThread::PlayBackThread(QObject *parent) :
 
 }
 
-void PlayBackThread::receiveFileData(const QString &path) {
+void PlayBackThread::receiveFilePath(const QString &path) {
 	QByteArray lsba = path.toLocal8Bit();
 		char *charPtrFileName = lsba.data();
 	LOG4CXX_DEBUG(threadLogger, "Should have access to file data now: " << charPtrFileName);
